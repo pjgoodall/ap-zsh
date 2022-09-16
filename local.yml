@@ -32,7 +32,7 @@
 
       copy:
         src: files/_zshrc
-        dest: "{{ home }}/,zshrc"
+        dest: "{{ home }}/.zshrc"
         owner: "{{ the_user }}"
         group: "{{ the_user }}"
         mode: '0750'
