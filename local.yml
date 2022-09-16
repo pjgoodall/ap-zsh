@@ -23,3 +23,16 @@
       package:
         name: zsh
         state: present
+
+    - name: copy basic .zshrc to user
+      become_user: "{{ the_user }}"
+
+      vars:
+        home: "{{ lookup('env', 'HOME') }}"
+
+      copy:
+        src: files/_zshrc
+        dest: "{{ home }}/,zshrc"
+        owner: "{{ the_user }}"
+        group: "{{ the_user }}"
+        mode: '0750'
