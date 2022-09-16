@@ -1,0 +1,25 @@
+---
+- name: Configure a remote ubuntu instance for zsh comfort using ansible-pull
+
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    - the_user: ubuntu
+
+  pre_tasks:
+    - name: update repositories
+      apt:
+        update_cache: true
+        cache_valid_time: "3600"
+
+  tasks:
+    - name: print the_user
+      debug:
+        msg: "the_user: {{ the_user }}"
+
+    - name: install zsh
+      package:
+        name: zsh
+        state: present
