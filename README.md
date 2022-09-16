@@ -14,6 +14,8 @@ Instead of repeatedly, partially configuring cli environments for working in con
 
 ## commentary
 
+* `.zshrc` as initially copied to targe should be as basic as possible. Full configuration from playbooks.
+
 ## references
 
 1. [Configuring Zsh Without Dependencies](https://thevaluable.dev/zsh-install-configure-mouseless/)
@@ -25,4 +27,6 @@ Instead of repeatedly, partially configuring cli environments for working in con
 2. create container and make snapshot `zero`
 3. establish ssh shell connection using `ssh-agent` authority
 
-## install zsh package and basic configuration:w
+## install zsh package and basic configuration
+
+1. Copy a base .zshrc into the_user home directory.
